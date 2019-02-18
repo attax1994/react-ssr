@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "babel -w src/ -d views/ | nodemon --watch views",
     "pack": "webpack --config webpack.config.js",
     "babel": "babel src -d views",
     "build": "npm run pack && npm run babel"
@@ -28,6 +28,7 @@
     "babel-loader": "^8.0.5",
     "css-loader": "^2.1.0",
     "node-sass": "^4.11.0",
+    "nodemon": "^1.18.10",
     "postcss": "^7.0.14",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
